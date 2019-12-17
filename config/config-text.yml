@@ -1,0 +1,62 @@
+spring:
+    datasource:
+        driverClassName: com.mysql.cj.jdbc.Driver
+        druid:
+            allow: ''
+            deny: ''
+            exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/monitor/druid/*'
+            filters: stat,config
+            initialSize: 5
+            logSlowSql: true
+            loginPassword: 123456
+            loginUsername: druid
+            master:
+                name: root
+                password: 268510
+                url: jdbc:mysql://localhost:3306/ruoyi_plus?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+            maxActive: 20
+            maxEvictableIdleTimeMillis: 900000
+            maxPoolPreparedStatementPerConnectionSize: 20
+            maxWait: 60000
+            mergeSql: true
+            minEvictableIdleTimeMillis: 300000
+            minIdle: 10
+            poolPreparedStatements: true
+            resetEnable: false
+            slowSqlMillis: 1000
+            spring:
+                datasource:
+                    connectionProperties: ''
+            testOnBorrow: false
+            testOnReturn: false
+            testWhileIdle: true
+            timeBetweenEvictionRunsMillis: 60000
+            validationQuery: SELECT 1 FROM DUAL
+        type: com.alibaba.druid.pool.DruidDataSource
+    redis:
+        database: 0
+        host: 192.168.11.86
+        key: ruoyi-plus
+        password: ''
+        pool:
+            max-active: 8
+            max-idle: 8
+            max-wait: 200
+            min-idle: 1
+        port: 3309
+        timeout: 3000
+zebra:
+    addressEnabled: true
+    api_url: http://127.0.0.1:1213
+    avatarPath: /var/avatar/
+    config:
+        refresh: http://127.0.0.1:7122/ruoyi-plus/actuator/refresh
+    copyrightYear: 2019
+    demoEnabled: false
+    downloadPath: /var/download/
+    gd_map_key: b2ca9db6aaad8f18d5102524c3662be8
+    ips: ''
+    name: RuoYi-plus
+    profile: /var/
+    uploadPath: /var/upload/
+    version: 2.0.1
